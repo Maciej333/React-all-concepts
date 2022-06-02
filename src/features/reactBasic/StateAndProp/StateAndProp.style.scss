@@ -1,0 +1,26 @@
+@import '../../../core/assets/styles/colors.style.scss';
+
+.grid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.state-prop {
+    width: 80%;
+    max-width: 600px;
+
+    .state {
+        @extend .grid;
+        grid-template-columns: repeat(4, minmax(25px, 1fr));
+        padding: 25px 0;
+        border-bottom: 2px solid $basic-color-2;
+    }
+
+    .props {
+        @extend .grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 25px 0;
+    }
+}

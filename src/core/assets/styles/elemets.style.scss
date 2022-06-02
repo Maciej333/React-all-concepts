@@ -1,5 +1,16 @@
 @import './colors.style.scss';
 
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    @extend .flex;
+    flex-direction: column;
+}
+
 %link-btn {
     color: $active-font;
     padding: 10px 15px;
@@ -20,4 +31,39 @@
     color: $active-font;
     letter-spacing: 10px;
     text-transform: uppercase;
+}
+
+%main-container {
+    @extend .flex-column;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 50px;
+}
+
+%minor-container {
+    @extend .flex-column;
+    position: relative;
+    width: 80%;
+    padding: 20px;
+    border: 1px solid $basic-color-4;
+
+    button {
+        @extend %link-btn;
+        font-size: 1rem;
+        padding: 5px;
+    }
+}
+
+%minor-header {
+    @extend .flex;
+    position: absolute;
+    top: -90px;
+    left: -25px;
+    height: 50px;
+    max-width: 100px;
+    color: $basic-color;
+    background-color: $basic-color-2;
+    padding: 20px;
+    font-size: 1.1rem;
+    border-radius: 2px 2px 20px 2px;
 }
