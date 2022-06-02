@@ -37,7 +37,8 @@
     @extend .flex-column;
     width: 100%;
     justify-content: flex-start;
-    gap: 50px;
+    gap: 100px;
+    margin-bottom: 200px;
 }
 
 %minor-container {

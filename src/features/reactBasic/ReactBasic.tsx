@@ -1,3 +1,4 @@
+import Lifecycle from './Lifecycle/Lifecycle';
 import './ReactBasic.style.scss';
 import StateAndProp from './StateAndProp/StateAndProp';
 
@@ -13,6 +14,10 @@ export default function ReactBasic() {
                         <p>div paragraph <span>ABC</span></p>
                     </div>
                 </StateAndProp>
+            </div>
+            <div className='minor'>
+                <h2>lifecycle</h2>
+                <Lifecycle />
             </div>
         </div>
     )
