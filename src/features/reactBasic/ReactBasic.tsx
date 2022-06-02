@@ -1,3 +1,4 @@
+import HandleEvents from './HandleEvents/HandleEvents';
 import Lifecycle from './Lifecycle/Lifecycle';
 import './ReactBasic.style.scss';
 import StateAndProp from './StateAndProp/StateAndProp';
@@ -18,6 +19,10 @@ export default function ReactBasic() {
             <div className='minor'>
                 <h2>lifecycle</h2>
                 <Lifecycle />
+            </div>
+            <div className='minor'>
+                <h2>Events</h2>
+                <HandleEvents />
             </div>
         </div>
     )

@@ -1,0 +1,32 @@
+@import '../../../core/assets/styles/colors.style.scss';
+
+.handle-events {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    p {
+        grid-column: 1/4;
+        color: $basic-color-2;
+        text-transform: uppercase;
+        text-align: left;
+        border-bottom: 1px solid $basic-color-4;
+    }
+
+    .header {
+        border-bottom: 2px solid $basic-color-2;
+    }
+
+    .scroll-div-container {
+        height: 100px;
+        overflow-y: auto;
+        background-color: $basic-color-4;
+
+        .scroll-div {
+            height: 500px;
+        }
+    }
+
+}
