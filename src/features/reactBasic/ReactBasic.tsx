@@ -1,7 +1,9 @@
+import './ReactBasic.style.scss';
+
 export default function ReactBasic() {
     return (
         <div>
-            <p>ReactBasic</p>
+            <h1>React Basic</h1>
         </div>
     )
 }

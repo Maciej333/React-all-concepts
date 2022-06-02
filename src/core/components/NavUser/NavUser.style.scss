@@ -1,5 +1,13 @@
+@import '../../assets/styles/elemets.style.scss';
+
 .nev-user {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
+}
+
+.nav-user-link {
+    a {
+        @extend %link-btn;
+    }
 }

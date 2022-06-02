@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { UserState } from '../../models/UserState';
 import { RootState } from '../../store/store';
 import './NavUser.style.scss';
@@ -16,6 +17,8 @@ export default function NavUser() {
                 <span>{userData.lastName}</span>
             </div>
             :
-            <p>Zaloguj</p>
+            <div className='nav-user-link'>
+                <Link to="/authenticate">Zaloguj</Link>
+            </div>
     )
 }

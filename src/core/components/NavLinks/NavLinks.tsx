@@ -3,8 +3,10 @@ import './NavLinks.style.scss';
 
 export default function NavLinks() {
     return (
-        <nav>
-            <NavLink to={"/basic"}> React Basic </NavLink>
+        <nav className='nav-links'>
+            <div className='link-container'>
+                <NavLink to={"/basic"}> React Basic </NavLink>
+            </div>
         </nav>
     )
 }

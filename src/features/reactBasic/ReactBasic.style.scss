@@ -1,0 +1,5 @@
+@import '../../core/assets/styles/elemets.style.scss';
+
+h1 {
+    @extend %header;
+}

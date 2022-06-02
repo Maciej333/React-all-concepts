@@ -1,25 +1,38 @@
 @import '../../assets/styles/colors.style.scss';
 
 .nav-links {
-    height: 50px;
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 20px;
+    border-bottom: 2px solid $basic-color-2;
 
-    a {
-        color: $basic-font;
-        font-size: 1.2rem;
-        font-weight: 550;
-        text-transform: uppercase;
-        text-decoration: none;
-        transition: 0.5s all ease-in;
+    .link-container {
+        margin-bottom: -2px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
 
-        &:hover,
-        &.active {
-            color: $active-font;
-            margin-bottom: 2px;
-            border-bottom: 1px solid $active-font;
+        a {
+            color: $basic-font;
+            padding: 8px 16px;
+            font-size: 1.2rem;
+            font-weight: 550;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: 0.5s all ease-in;
+
+            &:hover {
+                color: $active-font;
+            }
+        }
+
+        & a.active {
+            border-radius: 15px 15px 0 0;
+            border: 2px solid;
+            border-color: $basic-color-2 $basic-color-2 $basic-color $basic-color-2;
         }
     }
+
 }
