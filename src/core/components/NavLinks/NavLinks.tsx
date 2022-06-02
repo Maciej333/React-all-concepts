@@ -4,7 +4,7 @@ import './NavLinks.style.scss';
 export default function NavLinks() {
     return (
         <nav>
-            <NavLink to={"/"}> App </NavLink>
+            <NavLink to={"/basic"}> React Basic </NavLink>
         </nav>
     )
 }
