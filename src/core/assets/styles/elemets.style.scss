@@ -53,6 +53,13 @@
         font-size: 1rem;
         padding: 5px;
     }
+
+    p {
+        color: $basic-color-2;
+        text-align: left;
+        text-transform: uppercase;
+        border-bottom: 2px solid $basic-color-4;
+    }
 }
 
 %minor-header {

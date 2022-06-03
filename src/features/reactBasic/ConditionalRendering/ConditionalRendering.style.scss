@@ -10,12 +10,6 @@
         width: 100%;
     }
 
-    p {
-        text-align: left;
-        text-transform: uppercase;
-        border-bottom: 2px solid $basic-color-4;
-    }
-
     div {
         display: grid;
         grid-template-columns: 2fr 1fr;

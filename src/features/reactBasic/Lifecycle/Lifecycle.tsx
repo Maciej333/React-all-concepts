@@ -50,7 +50,7 @@ export default function Lifecycle() {
                     destroy ?
                         <Destroy setParentState={setDestroyState} />
                         :
-                        <p>Nothing to show, click' ADD'</p>
+                        <span>Nothing to show, click' ADD'</span>
                 }
             </div>
         </div>

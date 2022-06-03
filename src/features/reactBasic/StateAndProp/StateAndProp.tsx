@@ -38,8 +38,9 @@ export default function StateAndProp(props: { children: ReactNode, propString: s
 
                 <span>State object = </span>
                 <div>
-                    <p>name = {stateObject.name}</p>
-                    <p>age = {stateObject.age}</p>
+                    <span>name = {stateObject.name}</span>
+                    <br />
+                    <span>age = {stateObject.age}</span>
                 </div>
                 <button onClick={() => handleClickObject({ name: "Tadeusz", age: 40 })}>NEW</button>
                 <button onClick={() => handleClickObject({ name: "Alina", age: 10 })}>INIT</button>

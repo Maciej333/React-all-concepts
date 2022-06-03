@@ -13,9 +13,9 @@ export default function ReactBasic() {
             <div className='minor'>
                 <h2>state and props</h2>
                 <StateAndProp propString='Value for prop string'>
-                    <p>Children Paragraph</p>
+                    <span>Children Paragraph</span>
                     <div>
-                        <p>div paragraph <span>ABC</span></p>
+                        <span>div paragraph <span>ABC</span></span>
                     </div>
                 </StateAndProp>
             </div>
