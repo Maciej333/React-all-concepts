@@ -1,1 +1,7 @@
-.composition {}
+@import '../../../core/assets/styles/elemets.style.scss';
+
+.composition {
+    @extend .flex-column;
+    gap: 35px;
+    padding-bottom: 20px;
+}

@@ -1,3 +1,4 @@
+import Composition from './Composition/Composition';
 import ConditionalRendering from './ConditionalRendering/ConditionalRendering';
 import Forms from './Forms/Forms';
 import HandleEvents from './HandleEvents/HandleEvents';
@@ -39,10 +40,10 @@ export default function ReactBasic() {
                 <h2>Conditional rendering</h2>
                 <ConditionalRendering />
             </div>
-            {/*<div className='minor'>
-                <h2>Inheritance</h2>
-
-            </div> */}
+            <div className='minor'>
+                <h2>Composition</h2>
+                <Composition />
+            </div>
         </div>
     )
 }
