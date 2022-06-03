@@ -1,3 +1,4 @@
+import ConditionalRendering from './ConditionalRendering/ConditionalRendering';
 import Forms from './Forms/Forms';
 import HandleEvents from './HandleEvents/HandleEvents';
 import Lifecycle from './Lifecycle/Lifecycle';
@@ -33,6 +34,10 @@ export default function ReactBasic() {
             <div className='minor'>
                 <h2>Lists, Objects</h2>
                 <ListsObjects />
+            </div>
+            <div className='minor'>
+                <h2>Conditional rendering</h2>
+                <ConditionalRendering />
             </div>
             {/*<div className='minor'>
                 <h2>Inheritance</h2>
