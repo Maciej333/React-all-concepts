@@ -1,0 +1,27 @@
+@import '../../../core/assets/styles/colors.style.scss';
+@import '../../../core/assets/styles/elemets.style.scss';
+
+.lists-objects {
+    @extend .flex-column;
+    width: 60%;
+
+    p {
+        width: 100%;
+        text-align: left;
+        text-transform: uppercase;
+        border-bottom: 1px solid $basic-color-4;
+    }
+
+    .container {
+        display: flex;
+        padding-top: 35px;
+        margin-bottom: 50px;
+
+        span {
+            padding: 15px;
+            margin: 10px;
+            border: 2px solid $basic-color-4;
+            border-radius: 10px;
+        }
+    }
+}

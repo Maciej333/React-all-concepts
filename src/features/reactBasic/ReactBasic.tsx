@@ -1,6 +1,7 @@
 import Forms from './Forms/Forms';
 import HandleEvents from './HandleEvents/HandleEvents';
 import Lifecycle from './Lifecycle/Lifecycle';
+import ListsObjects from './ListsObjects/ListsObjects';
 import './ReactBasic.style.scss';
 import StateAndProp from './StateAndProp/StateAndProp';
 
@@ -29,11 +30,11 @@ export default function ReactBasic() {
                 <h2>Forms</h2>
                 <Forms />
             </div>
-            {/* <div className='minor'>
-                <h2>Lists</h2>
-
-            </div>
             <div className='minor'>
+                <h2>Lists, Objects</h2>
+                <ListsObjects />
+            </div>
+            {/*<div className='minor'>
                 <h2>Inheritance</h2>
 
             </div> */}
