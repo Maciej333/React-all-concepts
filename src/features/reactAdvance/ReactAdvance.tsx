@@ -1,3 +1,4 @@
+import CodeSplit from './CodeSplit/CodeSplit';
 import './ReactAdvance.style.scss';
 
 export default function ReactAdvance() {
@@ -6,7 +7,7 @@ export default function ReactAdvance() {
             <h1>React Advance</h1>
             <div className='minor'>
                 <h2>Code spliting</h2>
-
+                <CodeSplit />
             </div>
 
             <div className='minor'>

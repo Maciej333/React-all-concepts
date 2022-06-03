@@ -1,0 +1,11 @@
+@import '../../../core/assets/styles/elemets.style.scss';
+
+.code-split {
+    @extend .flex-column;
+    width: 80%;
+    gap: 30px;
+
+    p {
+        align-self: flex-start;
+    }
+}
