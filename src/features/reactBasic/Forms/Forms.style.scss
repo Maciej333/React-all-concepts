@@ -1,0 +1,16 @@
+@import '../../../core/assets/styles/elemets.style.scss';
+@import '../../../core/assets/styles/colors.style.scss';
+
+.forms {
+    @extend .flex-column;
+    width: 80%;
+    gap: 30px;
+
+    p {
+        align-self: flex-start;
+        color: $basic-color-2;
+        text-transform: uppercase;
+        text-align: left;
+        border-bottom: 2px solid $basic-color-4;
+    }
+}

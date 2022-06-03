@@ -1,0 +1,47 @@
+@import '../../../../core/assets/styles/colors.style.scss';
+@import '../../../../core/assets/styles/elemets.style.scss';
+
+%grid-2 {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.form-container {
+    @extend %grid-2;
+    gap: 50px;
+
+    form {
+        @extend .flex-column;
+
+        input {
+            width: 100%;
+        }
+
+        label,
+        .error {
+            align-self: flex-start;
+        }
+
+        .error {
+            color: $error-font;
+            margin-bottom: 20px;
+        }
+
+        button {
+            margin-top: 10px;
+            align-self: flex-end;
+
+            &:disabled {
+                color: $basic-color-4  !important;
+                text-decoration: line-through !important;
+            }
+        }
+    }
+
+    .form-state {
+        @extend %grid-2;
+        gap: 10px;
+    }
+}

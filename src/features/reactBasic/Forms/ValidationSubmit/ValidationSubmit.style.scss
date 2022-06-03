@@ -1,0 +1,5 @@
+@import '../ValidationChange/ValidationChange.style.scss';
+
+.validation-submit {
+    @extend .form-container;
+}

@@ -1,4 +1,4 @@
-import { MouseEvent, FocusEvent, useState, KeyboardEvent, ClipboardEvent, UIEvent, SyntheticEvent } from 'react';
+import { MouseEvent, FocusEvent, useState, KeyboardEvent, ClipboardEvent, UIEvent } from 'react';
 import './HandleEvents.style.scss';
 
 export default function HandleEvents() {

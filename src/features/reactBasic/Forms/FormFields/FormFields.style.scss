@@ -1,0 +1,35 @@
+@import '../../../../core/assets/styles/colors.style.scss';
+
+.form-fields {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    form,
+    .values-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    form {
+        padding-right: 50px;
+        border-right: 2px solid $basic-color-2;
+
+        button {
+            grid-column: 2/3;
+            margin-top: 10px;
+        }
+    }
+
+    .values-container {
+        padding-left: 50px;
+
+        img {
+            width: 100px;
+            height: auto;
+        }
+    }
+}
