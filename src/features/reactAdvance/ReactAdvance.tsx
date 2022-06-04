@@ -1,4 +1,5 @@
 import CodeSplit from './CodeSplit/CodeSplit';
+import Context from './Context/Context';
 import './ReactAdvance.style.scss';
 
 export default function ReactAdvance() {
@@ -12,7 +13,7 @@ export default function ReactAdvance() {
 
             <div className='minor'>
                 <h2>Context</h2>
-
+                <Context />
             </div>
 
             <div className='minor'>
