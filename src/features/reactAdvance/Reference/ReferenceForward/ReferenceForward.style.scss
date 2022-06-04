@@ -1,0 +1,28 @@
+@import '../../../../core/assets/styles/colors.style.scss';
+
+.reference-focus {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    input:focus {
+        outline: none !important;
+        border: 5px solid $error-font;
+        border-radius: 5px;
+    }
+
+    .btn-wrapper {
+        pointer-events: none;
+
+        button:disabled {
+            text-decoration: line-through !important;
+            background-color: $basic-color-4;
+
+            &:hover {
+                background-color: $basic-color-4  !important;
+            }
+        }
+    }
+}

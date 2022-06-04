@@ -1,0 +1,15 @@
+@import '../../../core/assets/styles/elemets.style.scss';
+
+.reference {
+    @extend .flex-column;
+    gap: 20px;
+
+    p {
+        width: 100%;
+    }
+
+    .flex {
+        @extend .flex;
+        gap: 20px;
+    }
+}
