@@ -1,0 +1,11 @@
+.fragment {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    p {
+        grid-column: 1/3;
+    }
+}

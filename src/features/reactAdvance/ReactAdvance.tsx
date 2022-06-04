@@ -1,5 +1,6 @@
 import CodeSplit from './CodeSplit/CodeSplit';
 import Context from './Context/Context';
+import Fragment from './Fragment/Fragment';
 import './ReactAdvance.style.scss';
 
 export default function ReactAdvance() {
@@ -18,7 +19,7 @@ export default function ReactAdvance() {
 
             <div className='minor'>
                 <h2>Fragment</h2>
-
+                <Fragment />
             </div>
 
             <div className='minor'>
