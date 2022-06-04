@@ -1,6 +1,7 @@
 import CodeSplit from './CodeSplit/CodeSplit';
 import Context from './Context/Context';
 import Fragment from './Fragment/Fragment';
+import HigherOrder from './HigherOrder/HigherOrder';
 import './ReactAdvance.style.scss';
 import Reference from './Reference/Reference';
 
@@ -30,7 +31,7 @@ export default function ReactAdvance() {
 
             <div className='minor'>
                 <h2>Higher order components</h2>
-
+                <HigherOrder />
             </div>
 
             <div className='minor'>

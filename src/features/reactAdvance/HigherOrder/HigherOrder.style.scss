@@ -1,0 +1,11 @@
+.higher-order {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    div {
+        grid-column: 1/3;
+    }
+}
