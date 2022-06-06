@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { Routes, Route, Outlet } from 'react-router-dom';
+import NestedParams from '../RouterBasic/Params/Params';
 
 const RouterBasic = lazy(() => import('../RouterBasic/RouterBasic'));
 
@@ -9,6 +10,9 @@ export default function ReactRouterRoutes() {
             <Route path="" element={<Outlet />}>
                 <Route path="/" element={<p>Select nested path</p>} />
                 <Route path="/basic/*" element={<Suspense fallback={<p>Loading...</p>}><RouterBasic /></Suspense>}>
+                    <Route path="params/:id/:name" element={<NestedParams />}></Route>
+                    <Route path="params/:id" element={<NestedParams />}></Route>
+                    <Route path="params" element={<NestedParams />}></Route>
                 </Route>
                 <Route path="*" element={<p>Path not found</p>} />
             </Route>

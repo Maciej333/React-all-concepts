@@ -1,0 +1,17 @@
+@import '../Location/Location.style.scss';
+
+.params {
+    @extend .location;
+
+    nav {
+        gap: 20px;
+    }
+
+    .div-grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+}
