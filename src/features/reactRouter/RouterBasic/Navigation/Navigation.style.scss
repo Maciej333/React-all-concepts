@@ -1,0 +1,15 @@
+@import '../Location/Location.style.scss';
+
+.navigation {
+    @extend .location;
+
+    .div-btn {
+        padding: 5px;
+        border: 2px solid $basic-color-2;
+        border-radius: 5px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
