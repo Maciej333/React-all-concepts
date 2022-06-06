@@ -39,16 +39,6 @@ export default function ReactAdvance() {
                 <h2>Memo</h2>
                 <MemoElement />
             </div>
-
-            <div className='minor'>
-                <h2>Other Hooks</h2>
-
-            </div>
-
-            <div className='minor'>
-                <h2>Fetch | axios [ require backend ]</h2>
-
-            </div>
         </div>
     )
 }
