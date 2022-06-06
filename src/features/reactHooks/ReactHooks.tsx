@@ -1,5 +1,6 @@
 import Context from '../reactAdvance/Context/Context';
 import Lifecycle from '../reactBasic/Lifecycle/Lifecycle';
+import HookReducer from './HookReducer/HookReducer';
 import HookState from './HookState/HookState';
 import './ReactHooks.style.scss';
 
@@ -20,6 +21,11 @@ export default function ReactHooks() {
             <div className='minor'>
                 <h2>useContext</h2>
                 <Context />
+            </div>
+
+            <div className='minor'>
+                <h2>useReducer</h2>
+                <HookReducer />
             </div>
         </div>
     )

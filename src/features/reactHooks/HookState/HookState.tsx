@@ -1,5 +1,5 @@
 import './HookState.style.scss';
-import { ChangeEvent, useState } from 'react'
+import { ChangeEvent, Fragment, useState } from 'react'
 
 export default function HookState() {
 
@@ -58,17 +58,17 @@ export default function HookState() {
             <span>
                 {
                     stateTab.map((el, index) => {
-                        return <>
+                        return <Fragment key={`[State tab] = ${index}`}>
                             <span>{`${index} = ${el}`}</span>
                             <br />
-                        </>
+                        </Fragment>
                     })
                 }
             </span>
             <div>
                 {
                     stateTab.map((el, index) => {
-                        return <>
+                        return <Fragment key={`[State tab form] = ${index}`}>
                             <label htmlFor={`[TAB] ${index}`}>{index}=</label>
                             <input
                                 id={`[TAB] ${index}`}
@@ -76,7 +76,7 @@ export default function HookState() {
                                 value={el}
                                 onChange={(e) => handleTab(index, e.target.value)}
                             ></input>
-                        </>
+                        </Fragment>
                     })
                 }
             </div>
@@ -85,17 +85,17 @@ export default function HookState() {
             <span>
                 {
                     Object.entries(stateObject).map(el => {
-                        return <>
+                        return <Fragment key={`[State object] = ${el[0]}`}>
                             <span>{`${el[0]}: ${el[1]}`}</span>
                             <br />
-                        </>;
+                        </Fragment>;
                     })
                 }
             </span>
             <div>
                 {
-                    Object.entries(stateObject).map((el, index) => {
-                        return <>
+                    Object.entries(stateObject).map((el) => {
+                        return <Fragment key={`[State object form] = ${el[0]}`}>
                             <label htmlFor={el[0]}>{el[0]}=</label>
                             <input
                                 id={el[0]}
@@ -103,7 +103,7 @@ export default function HookState() {
                                 value={el[1]}
                                 onChange={(e) => handleObject(el[0], e.target.value)}
                             ></input>
-                        </>
+                        </Fragment>
                     })
                 }
             </div>
