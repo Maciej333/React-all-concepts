@@ -1,0 +1,17 @@
+@import '../../core/assets/styles/elemets.style.scss';
+
+h1 {
+    @extend %header;
+}
+
+.react-hooks {
+    @extend %main-container;
+
+    .minor {
+        @extend %minor-container;
+
+        h2 {
+            @extend %minor-header;
+        }
+    }
+}

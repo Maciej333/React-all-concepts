@@ -7,6 +7,7 @@ export default function NavLinks() {
             <div className='link-container'>
                 <NavLink to={"/basic"}> React Basic </NavLink>
                 <NavLink to={"/advance"}> React Advance </NavLink>
+                <NavLink to={"/hooks"}> React Hooks </NavLink>
             </div>
         </nav>
     )
