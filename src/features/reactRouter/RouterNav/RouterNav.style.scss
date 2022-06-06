@@ -1,0 +1,6 @@
+@import '../../../core/components/NavLinks/NavLinks.style.scss';
+
+.router-nav {
+    @extend .nav-links;
+    width: 50%;
+}

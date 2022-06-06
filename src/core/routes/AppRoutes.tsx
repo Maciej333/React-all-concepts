@@ -15,7 +15,7 @@ export default function AppRoutes(props: { NavElemet: JSX.Element }) {
                 <Route path="/basic" element={<Suspense fallback={<Loading />}><ReactBasic /></Suspense>} />
                 <Route path="/advance" element={<Suspense fallback={<Loading />}><ReactAdvance /></Suspense>} />
                 <Route path="/hooks" element={<Suspense fallback={<Loading />}><ReactHooks /></Suspense>} />
-                <Route path="/router" element={<Suspense fallback={<Loading />}><ReactRouter /></Suspense>} />
+                <Route path="/router/*" element={<Suspense fallback={<Loading />}><ReactRouter /></Suspense>} />
             </Routes>
         </Router>
     )

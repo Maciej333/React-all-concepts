@@ -6,6 +6,7 @@ h1 {
 
 .react-router {
     @extend %main-container;
+    gap: 20px;
 
     .minor {
         @extend %minor-container;
