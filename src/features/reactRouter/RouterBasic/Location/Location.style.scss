@@ -1,0 +1,17 @@
+@import '../../../../core/assets/styles/elemets.style.scss';
+
+.location {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    nav {
+        grid-column: 1/3;
+
+        a {
+            @extend %link-btn;
+        }
+    }
+}

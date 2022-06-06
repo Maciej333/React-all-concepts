@@ -10,6 +10,7 @@ h1 {
 
     .minor {
         @extend %minor-container;
+        margin-bottom: 100px;
 
         h2 {
             @extend %minor-header;

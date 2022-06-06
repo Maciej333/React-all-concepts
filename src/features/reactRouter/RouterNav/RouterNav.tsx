@@ -5,7 +5,9 @@ export default function RouterNav() {
     return (
         <nav className='router-nav'>
             <div className='link-container'>
-                <NavLink to="/router/abc">ABC</NavLink>
+                <NavLink to="/router/basic">Basic</NavLink>
+
+                <NavLink to="/router/error">Error</NavLink>
             </div>
         </nav>
     )
