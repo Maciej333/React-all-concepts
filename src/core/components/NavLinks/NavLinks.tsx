@@ -8,6 +8,7 @@ export default function NavLinks() {
                 <NavLink to={"/basic"}> React Basic </NavLink>
                 <NavLink to={"/advance"}> React Advance </NavLink>
                 <NavLink to={"/hooks"}> React Hooks </NavLink>
+                <NavLink to={"/router"}> React Router </NavLink>
             </div>
         </nav>
     )
