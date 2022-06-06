@@ -1,4 +1,5 @@
 import Context from '../reactAdvance/Context/Context';
+import Reference from '../reactAdvance/Reference/Reference';
 import Lifecycle from '../reactBasic/Lifecycle/Lifecycle';
 import HookCallback from './HookCallback/HookCallback';
 import HookMemo from './HookMemo/HookMemo';
@@ -38,6 +39,11 @@ export default function ReactHooks() {
             <div className='minor'>
                 <h2>useMemo</h2>
                 <HookMemo />
+            </div>
+
+            <div className='minor'>
+                <h2>useRef</h2>
+                <Reference />
             </div>
         </div>
     )
