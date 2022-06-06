@@ -1,0 +1,29 @@
+@import '../../../core/assets/styles/elemets.style.scss';
+
+.grid {
+    margin: 25px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.memo-element {
+    @extend .flex;
+    padding: 20px;
+    gap: 20px;
+    border: 2px solid $basic-color-4;
+    border-radius: 20px;
+
+    div {
+        @extend .flex-column;
+        gap: 10px;
+
+        .memo-container {
+            padding: 20px;
+            border: 2px solid $basic-color-4;
+            border-radius: 10px;
+        }
+    }
+}
