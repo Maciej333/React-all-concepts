@@ -5,6 +5,7 @@ import HookCallback from './HookCallback/HookCallback';
 import HookMemo from './HookMemo/HookMemo';
 import HookReducer from './HookReducer/HookReducer';
 import HookState from './HookState/HookState';
+import HookTransition from './HookTransition/HookTransition';
 import './ReactHooks.style.scss';
 
 export default function ReactHooks() {
@@ -44,6 +45,11 @@ export default function ReactHooks() {
             <div className='minor'>
                 <h2>useRef</h2>
                 <Reference />
+            </div>
+
+            <div className='minor'>
+                <h2>Transition</h2>
+                <HookTransition />
             </div>
         </div>
     )
