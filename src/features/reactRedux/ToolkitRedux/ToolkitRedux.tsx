@@ -3,19 +3,19 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { Action } from 'redux';
 import { ThunkDispatch } from 'redux-thunk';
-import { RootState } from '../../../core/store/store';
-import { add, addAfter2sec, minus, reset } from '../store/basic/basic.actions';
-import { IBasicReducer } from '../store/basic/basic.state';
-import './BasicRedux.style.scss';
+import { AppDispatch, RootState } from '../../../core/store/store';
+import { add, addAfter2sec, minus, reset } from '../store/toolkit/toolkit.actions';
+import { IToolkitReducer } from '../store/toolkit/toolkit.state';
+import './ToolkitRedux.style.scss';
 
-export default function BasicRedux() {
+export default function ToolkitRedux() {
 
     const [state, setState] = useState(1);
 
-    const dispatch = useDispatch();
+    const dispatch = useDispatch<AppDispatch>();
     const dispatchAsync = useDispatch<ThunkDispatch<RootState, void, Action>>();
 
-    const counter = useSelector<RootState>(state => state.basicCounter) as IBasicReducer;
+    const counter = useSelector<RootState>(state => state.toolkitCounter) as IToolkitReducer;
 
     const handleAdd = () => {
         dispatch(add(state));
@@ -39,7 +39,7 @@ export default function BasicRedux() {
     }
 
     return (
-        <div className='basic-redux'>
+        <div className='toolkit-redux'>
             <div className='store'>
                 <span>Counter = </span>
                 <span>{counter.counter}</span>

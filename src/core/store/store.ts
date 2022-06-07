@@ -3,11 +3,13 @@ import { combineReducers } from 'redux';
 import { userReducer } from './user/user.reducer';
 import thunk from 'redux-thunk'
 import { basicReducer } from '../../features/reactRedux/store/basic/basic.reducer';
+import { toolkitReducer } from '../../features/reactRedux/store/toolkit/toolkit.reducer';
 
 export const store = configureStore({
     reducer: combineReducers({
         user: userReducer,
-        counter: basicReducer
+        basicCounter: basicReducer,
+        toolkitCounter: toolkitReducer
     }),
     middleware: [
         thunk

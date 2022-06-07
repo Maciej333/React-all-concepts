@@ -1,0 +1,5 @@
+@import '../BasicRedux/BasicRedux.style.scss';
+
+.toolkit-redux {
+    @extend .basic-redux;
+}
