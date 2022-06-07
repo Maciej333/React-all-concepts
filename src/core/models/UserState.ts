@@ -2,5 +2,6 @@ import { User } from "./User"
 
 export type UserState = {
     userData: User;
-    isLogin: boolean
+    isLogin: boolean,
+    error: string | null
 }

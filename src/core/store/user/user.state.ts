@@ -2,8 +2,11 @@ import { UserState } from "../../models/UserState"
 
 export const userInitState: UserState = {
     userData: {
-        firstName: 'ABC',
-        lastName: 'CDE'
+        id: -1,
+        firstName: '',
+        lastName: '',
+        role: []
     },
-    isLogin: false
+    isLogin: false,
+    error: null
 }
