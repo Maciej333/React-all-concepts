@@ -1,3 +1,4 @@
+import BasicRedux from './BasicRedux/BasicRedux';
 import './ReactRedux.style.scss';
 
 export default function ReactRedux() {
@@ -6,7 +7,7 @@ export default function ReactRedux() {
             <h1>React Redux</h1>
             <div className='minor'>
                 <h2>Basic redux</h2>
-
+                <BasicRedux />
             </div>
         </div>
     )

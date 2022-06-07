@@ -2,10 +2,12 @@ import { configureStore } from '@reduxjs/toolkit';
 import { combineReducers } from 'redux';
 import { userReducer } from './user/user.reducer';
 import thunk from 'redux-thunk'
+import { basicReducer } from '../../features/reactRedux/store/basic/basic.reducer';
 
 export const store = configureStore({
     reducer: combineReducers({
-        user: userReducer
+        user: userReducer,
+        counter: basicReducer
     }),
     middleware: [
         thunk
