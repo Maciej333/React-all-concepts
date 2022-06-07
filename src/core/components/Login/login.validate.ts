@@ -13,7 +13,6 @@ export const validate = (
 ) => {
     let result = true;
     const userRoleLength = Object.keys(UserRoles).length / 2 - 1;
-    console.log("userRoleLength = ", userRoleLength)
 
     const { firstname, lastname, role } = state;
 
