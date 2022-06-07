@@ -11,6 +11,7 @@ import { UserState } from '../../models/UserState';
 import { UserRoles } from '../../utils/userRoles.enum';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { ProtectedRouteLocationState } from '../../routes/ProtectedRoute';
+import { validate } from './login.validate';
 
 export default function Login() {
 
@@ -37,8 +38,14 @@ export default function Login() {
     const [stateLogin, setStateLogin] = useState({
         firstname: "",
         lastname: "",
-        role: "",
+        role: "-1",
         success: true
+    })
+
+    const [stateLoginError, setStateLoginError] = useState({
+        firstname: "",
+        lastname: "",
+        role: "",
     })
 
     const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -48,7 +55,13 @@ export default function Login() {
                 ...prev,
                 [name]: value
             }
-        })
+        });
+        setStateLoginError(prev => {
+            return {
+                ...prev,
+                [name]: ""
+            }
+        });
     }
 
     const handleChecked = (e: ChangeEvent<HTMLInputElement>) => {
@@ -63,14 +76,16 @@ export default function Login() {
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        const { firstname, lastname, role, success } = stateLogin;
-        const user: User = {
-            id: 1,
-            firstName: firstname,
-            lastName: lastname,
-            role: [Number(role)]
+        if (validate(stateLogin, setStateLoginError)) {
+            const { firstname, lastname, role, success } = stateLogin;
+            const user: User = {
+                id: 1,
+                firstName: firstname,
+                lastName: lastname,
+                role: [Number(role)]
+            }
+            dispatch(login(user, success));
         }
-        dispatch(login(user, success));
     }
 
     return (
@@ -84,13 +99,15 @@ export default function Login() {
 
                         <label htmlFor="firstname">Firstname:<span className='required'>*</span></label>
                         <input id="firstname" name="firstname" value={stateLogin.firstname} onChange={handleChange}></input>
+                        <span className='error'>{stateLoginError.firstname}</span>
 
                         <label htmlFor="lastname">Lastname:<span className='required'>*</span></label>
                         <input id="lastname" name="lastname" value={stateLogin.lastname} onChange={handleChange}></input>
+                        <span className='error'>{stateLoginError.lastname}</span>
 
                         <label htmlFor="role">Role:<span className='required'>*</span></label>
                         <select id="role" name="role" value={stateLogin.role} onChange={handleChange}>
-                            <option value={""}>{""}</option>
+                            <option value={"-1"}>{""}</option>
                             {
                                 Object.keys(UserRoles)
                                     .filter(el => {
@@ -104,6 +121,7 @@ export default function Login() {
                                     })
                             }
                         </select>
+                        <span className='error'>{stateLoginError.role}</span>
 
                         <label htmlFor="success">Success:<span className='required'>*</span></label>
                         <input id="success" name="success" type="checkbox" checked={stateLogin.success} onChange={handleChecked}></input>

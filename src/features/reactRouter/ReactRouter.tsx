@@ -6,7 +6,7 @@ import RouterNav from './RouterNav/RouterNav';
 export default function ReactRouter() {
     return (
         <div className='react-router'>
-            <h1>ReactRouter</h1>
+            <h1>React Router</h1>
             <RouterNav />
             <ReactRouterRoutes />
             <Outlet />
