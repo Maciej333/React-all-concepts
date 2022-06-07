@@ -1,6 +1,7 @@
 import BasicRedux from './BasicRedux/BasicRedux';
 import './ReactRedux.style.scss';
 import ToolkitRedux from './ToolkitRedux/ToolkitRedux';
+import ToolkitSliceRedux from './ToolkitSliceRedux/ToolkitSliceRedux';
 
 export default function ReactRedux() {
     return (
@@ -14,6 +15,11 @@ export default function ReactRedux() {
             <div className='minor'>
                 <h2>Toolkit redux</h2>
                 <ToolkitRedux />
+            </div>
+
+            <div className='minor'>
+                <h2>Toolkit slice redux</h2>
+                <ToolkitSliceRedux />
             </div>
         </div>
     )
