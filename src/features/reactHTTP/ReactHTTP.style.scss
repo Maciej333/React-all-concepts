@@ -1,0 +1,19 @@
+@import '../../core/assets/styles/elemets.style.scss';
+
+h1 {
+    @extend %header;
+}
+
+.react-HTTP {
+    @extend %main-container;
+    gap: 20px;
+
+    .minor {
+        @extend %minor-container;
+        margin-bottom: 100px;
+
+        h2 {
+            @extend %minor-header;
+        }
+    }
+}

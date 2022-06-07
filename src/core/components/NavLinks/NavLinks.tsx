@@ -10,6 +10,7 @@ export default function NavLinks() {
                 <NavLink to={"/hooks"}> React Hooks </NavLink>
                 <NavLink to={"/router"}> React Router </NavLink>
                 <NavLink to={"/redux"}> React Redux </NavLink>
+                <NavLink to={"/http"}> React HTTP </NavLink>
             </div>
         </nav>
     )
