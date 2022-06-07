@@ -1,16 +1,11 @@
 import React, { useEffect } from "react";
-// import { useDispatch } from "react-redux";
-// import { Action } from "redux";
-// import { ThunkDispatch } from "redux-thunk";
 import { useAppThunkDispatch } from "../hooks/store.hooks";
-// import { RootState } from "../store/store";
 import { refresh } from "../store/user/user.actions";
 
 export function withAuth<T>(Component: React.ComponentType<T>) {
 
     const NewComponent = (props: T) => {
 
-        // const dispatch = useDispatch<ThunkDispatch<RootState, void, Action>>();
         const dispatch = useAppThunkDispatch();
 
         useEffect(() => {

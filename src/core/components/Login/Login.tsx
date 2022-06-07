@@ -1,13 +1,7 @@
 import './Login.style.scss';
-import { ChangeEvent, FormEvent, useEffect, useState } from 'react'
-// import { useDispatch } from 'react-redux'
-// import { RootState } from '../../store/store';
+import { ChangeEvent, FormEvent, useEffect, useState } from 'react';
 import { User } from '../../models/User';
 import { login } from '../../store/user/user.actions';
-// import { ThunkDispatch } from 'redux-thunk';
-// import { Action } from 'redux';
-// import { useSelector } from 'react-redux';
-// import { UserState } from '../../models/UserState';
 import { UserRoles } from '../../utils/userRoles.enum';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { ProtectedRouteLocationState } from '../../routes/ProtectedRoute';
@@ -18,8 +12,7 @@ export default function Login() {
 
     const location = useLocation();
     const navigate = useNavigate();
-    // const { userData, isLogin, error } = useSelector<RootState, UserState>(state => state.user);
-    // const dispatch = useDispatch<ThunkDispatch<RootState, void, Action>>();
+    
     const { userData, isLogin, error } = useAppSelector(state => state.user)
     const dispatch = useAppThunkDispatch();
 

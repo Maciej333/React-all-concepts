@@ -1,8 +1,5 @@
-// import { useSelector } from "react-redux";
 import { Navigate, useLocation } from "react-router-dom";
 import { useAppSelector } from "../hooks/store.hooks";
-// import { UserState } from "../models/UserState";
-// import { RootState } from "../store/store";
 import { UserRoles } from "../utils/userRoles.enum";
 
 export type ProtectedRouteLocationState = {
@@ -15,7 +12,6 @@ export default function ProtectedRoute(props: { children: JSX.Element, authRole:
     const { children, authRole } = props;
 
     const location = useLocation();
-    // const auth = useSelector<RootState, UserState>(state => state.user);
     const auth = useAppSelector(state => state.user);
     let isRole = false;
 

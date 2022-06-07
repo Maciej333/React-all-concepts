@@ -1,21 +1,12 @@
 import { ChangeEvent, useState } from 'react';
-// import { useSelector } from 'react-redux';
-// import { useDispatch } from 'react-redux';
-// import { Action } from 'redux';
-// import { ThunkDispatch } from 'redux-thunk';
 import { useAppDispatch, useAppSelector, useAppThunkDispatch } from '../../../core/hooks/store.hooks';
-// import { RootState } from '../../../core/store/store';
 import { add, addAfter2sec, minus, reset } from '../store/basic/basic.actions';
-// import { IBasicReducer } from '../store/basic/basic.state';
 import './BasicRedux.style.scss';
 
 export default function BasicRedux() {
 
     const [state, setState] = useState(1);
 
-    // const counter = useSelector<RootState>(state => state.basicCounter) as IBasicReducer;
-    // const dispatch = useDispatch();
-    // const dispatchAsync = useDispatch<ThunkDispatch<RootState, void, Action>>();
     const counter = useAppSelector(state => state.basicCounter);
     const dispatch = useAppDispatch();
     const dispatchAsync = useAppThunkDispatch();
