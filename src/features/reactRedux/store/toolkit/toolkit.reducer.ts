@@ -31,8 +31,8 @@ export const toolkitReducer = createReducer(initToolkitState, (builder) =>
                 counter: -1
             };
         })
-        .addDefaultCase(() => {
-            return initToolkitState;
+        .addDefaultCase((state) => {
+            return state;
         })
 )
 
