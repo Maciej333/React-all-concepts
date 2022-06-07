@@ -1,18 +1,21 @@
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
+// import { useDispatch } from 'react-redux';
+// import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { Action } from 'redux';
-import { ThunkDispatch } from 'redux-thunk';
-import { UserState } from '../../models/UserState';
-import { RootState } from '../../store/store';
+// import { Action } from 'redux';
+// import { ThunkDispatch } from 'redux-thunk';
+import { useAppSelector, useAppThunkDispatch } from '../../hooks/store.hooks';
+// import { UserState } from '../../models/UserState';
+// import { RootState } from '../../store/store';
 import { logout } from '../../store/user/user.actions';
 import { UserRoles } from '../../utils/userRoles.enum';
 import './NavUser.style.scss';
 
 export default function NavUser() {
 
-    const { isLogin, userData } = useSelector<RootState, UserState>(state => state.user);
-    const dispatch = useDispatch<ThunkDispatch<RootState, void, Action>>();
+    // const { isLogin, userData } = useSelector<RootState, UserState>(state => state.user);
+    // const dispatch = useDispatch<ThunkDispatch<RootState, void, Action>>();
+    const { isLogin, userData } = useAppSelector(state => state.user);
+    const dispatch = useAppThunkDispatch();
 
     const handleLogout = () => {
         dispatch(logout(true));

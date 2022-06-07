@@ -1,21 +1,25 @@
 import { ChangeEvent, useState } from 'react';
-import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux';
-import { Action } from 'redux';
-import { ThunkDispatch } from 'redux-thunk';
-import { AppDispatch, RootState } from '../../../core/store/store';
+// import { useSelector } from 'react-redux';
+// import { useDispatch } from 'react-redux';
+// import { Action } from 'redux';
+// import { ThunkDispatch } from 'redux-thunk';
+import { useAppDispatch, useAppSelector, useAppThunkDispatch } from '../../../core/hooks/store.hooks';
+// import { AppDispatch, RootState } from '../../../core/store/store';
 import { addAfter2sec, toolkitSliceAction } from '../store/slice/toolkit.slice';
-import { IToolkitReducer } from '../store/toolkit/toolkit.state';
+// import { IToolkitReducer } from '../store/toolkit/toolkit.state';
 import './ToolkitSliceRedux.style.scss';
 
 export default function ToolkitSliceRedux() {
 
     const [state, setState] = useState(1);
 
-    const dispatch = useDispatch<AppDispatch>();
-    const dispatchAsync = useDispatch<ThunkDispatch<RootState, void, Action>>();
+    // const counter = useSelector<RootState>(state => state.toolkitSliceCounter) as IToolkitReducer;
+    // const dispatch = useDispatch<AppDispatch>();
+    // const dispatchAsync = useDispatch<ThunkDispatch<RootState, void, Action>>();
+    const counter = useAppSelector(state => state.toolkitSliceCounter);
+    const dispatch = useAppDispatch();
+    const dispatchAsync = useAppThunkDispatch();
 
-    const counter = useSelector<RootState>(state => state.toolkitSliceCounter) as IToolkitReducer;
 
     const handleAdd = () => {
         dispatch(toolkitSliceAction.add(state));
