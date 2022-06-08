@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/29.eaeca814.chunk.js","mappings":"4LAAe,SAASA,IACpB,OACI","sources":["features/reactAdvance/CodeSplit/ElementLazy/ElementLazy.tsx"],"sourcesContent":["export default function ElementLazy() {\r\n    return (\r\n        <div>\r\n            ElementLazy\r\n        </div>\r\n    )\r\n}\r\n"],"names":["ElementLazy"],"sourceRoot":""}
