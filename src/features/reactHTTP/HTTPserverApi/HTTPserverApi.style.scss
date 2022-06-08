@@ -1,0 +1,5 @@
+@import '../HTTPFetch/HTTPFetch.style.scss';
+
+.HTTP-server-api {
+    @extend .HTTP-fetch;
+}

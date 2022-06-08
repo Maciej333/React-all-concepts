@@ -1,5 +1,6 @@
 import HTTPAxios from './HTTPAxios/HTTPAxios';
 import HTTPFetch from './HTTPFetch/HTTPFetch';
+import HTTPserverApi from './HTTPserverApi/HTTPserverApi';
 import HTTPuseApi from './HTTPuseApi/HTTPuseApi';
 import './ReactHTTP.style.scss';
 
@@ -26,7 +27,7 @@ export default function ReactHTTP() {
 
             <div className='minor'>
                 <h2>API service</h2>
-
+                <HTTPserverApi />
             </div>
         </div>
     )
