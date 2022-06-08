@@ -1,3 +1,4 @@
+import HTTPAxios from './HTTPAxios/HTTPAxios';
 import HTTPFetch from './HTTPFetch/HTTPFetch';
 import './ReactHTTP.style.scss';
 
@@ -13,7 +14,7 @@ export default function ReactHTTP() {
 
             <div className='minor'>
                 <h2>axios</h2>
-
+                <HTTPAxios />
             </div>
 
 

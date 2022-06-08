@@ -1,9 +1,11 @@
+import './HTTPAxios.style.scss';
+import axios from 'axios';
 import { useState } from 'react';
 import { IHttpModel } from '../../../core/models/HttpModel';
 import { deleteFailureUrl, deleteSuccessUrl, getFailureUrl, getSuccessUrl, postFailureUrl, postSuccessUrl, putFailureUrl, putSuccessUrl } from '../httpUrl';
-import './HTTPFetch.style.scss';
+import { IHttpResponse } from '../../../core/models/HttpResponse';
 
-export default function HTTPFetch() {
+export default function HTTPAxios() {
 
     const postData: IHttpModel = {
         name: "postName",
@@ -25,15 +27,9 @@ export default function HTTPFetch() {
     const handleClickGet = (version: boolean) => {
         const url = version ? getSuccessUrl : getFailureUrl;
         setLoadGet(true);
-        fetch(url)
+        axios.get(url)
             .then(res => {
-                if (res.ok) {
-                    return res.json();
-                }
-                throw new Error(res.status + "");
-            })
-            .then(data => {
-                setStateGet(data.name);
+                setStateGet(res.data.name);
             })
             .catch(err => {
                 setStateGet("get error = " + err);
@@ -46,21 +42,17 @@ export default function HTTPFetch() {
     const handleClickPost = (version: boolean) => {
         const url = version ? postSuccessUrl : postFailureUrl;
         setLoadPost(true);
-        fetch(url, {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json;charset=UTF-8',
-            },
-            body: JSON.stringify(postData),
-        })
-            .then(res => {
-                if (res.ok) {
-                    return res.json();
+        axios.post<IHttpResponse>(
+            url,
+            postData,
+            {
+                headers: {
+                    'content-type': 'application/json;charset=UTF-8',
                 }
-                throw new Error(res.status + "");
-            })
-            .then(data => {
-                setStatePost(data.msg);
+            }
+        )
+            .then(res => {
+                setStatePost(res.data.msg);
             })
             .catch(err => {
                 setStatePost("post error = " + err);
@@ -73,21 +65,17 @@ export default function HTTPFetch() {
     const handleClickPut = (version: boolean) => {
         const url = version ? putSuccessUrl : putFailureUrl;
         setLoadPut(true);
-        fetch(url, {
-            method: 'PUT',
-            headers: {
-                'content-type': 'application/json;charset=UTF-8',
-            },
-            body: JSON.stringify(putData),
-        })
-            .then(res => {
-                if (res.ok) {
-                    return res.json();
+        axios.put<IHttpResponse>(
+            url,
+            putData,
+            {
+                headers: {
+                    'content-type': 'application/json;charset=UTF-8',
                 }
-                throw new Error(res.status + "");
-            })
-            .then(data => {
-                setStatePut(data.msg);
+            }
+        )
+            .then(res => {
+                setStatePut(res.data.msg);
             })
             .catch(err => {
                 setStatePut("put error = " + err);
@@ -100,20 +88,16 @@ export default function HTTPFetch() {
     const handleClickDelete = (version: boolean) => {
         const url = version ? deleteSuccessUrl : deleteFailureUrl;
         setLoadDelete(true);
-        fetch(url, {
-            method: 'DELETE',
-            headers: {
-                'content-type': 'application/json;charset=UTF-8',
-            }
-        })
-            .then(res => {
-                if (res.ok) {
-                    return res.json();
+        axios.delete<IHttpResponse>(
+            url,
+            {
+                headers: {
+                    'content-type': 'application/json;charset=UTF-8',
                 }
-                throw new Error(res.status + "");
-            })
-            .then(data => {
-                setStateDelete(data.msg);
+            }
+        )
+            .then(res => {
+                setStateDelete(res.data.msg);
             })
             .catch(err => {
                 setStateDelete("delete error = " + err);
@@ -124,7 +108,7 @@ export default function HTTPFetch() {
     }
 
     return (
-        <div className='HTTP-fetch'>
+        <div className='HTTP-axios'>
             <span>Get:</span>
             <span className='state'>{loadGet ? "loading get" : stateGet}</span>
             <div className='operations'>

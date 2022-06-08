@@ -1,4 +1,4 @@
-export interface HttpModel {
+export interface IHttpModel {
     name: string,
     age: number
 }

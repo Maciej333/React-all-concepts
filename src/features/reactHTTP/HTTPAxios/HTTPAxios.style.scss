@@ -1,0 +1,5 @@
+@import '../HTTPFetch/HTTPFetch.style.scss';
+
+.HTTP-axios {
+    @extend .HTTP-fetch;
+}
