@@ -2,6 +2,7 @@ import Context from '../reactAdvance/Context/Context';
 import Reference from '../reactAdvance/Reference/Reference';
 import Lifecycle from '../reactBasic/Lifecycle/Lifecycle';
 import HookCallback from './HookCallback/HookCallback';
+import HookCustom from './HookCustom/HookCustom';
 import HookMemo from './HookMemo/HookMemo';
 import HookReducer from './HookReducer/HookReducer';
 import HookState from './HookState/HookState';
@@ -50,6 +51,11 @@ export default function ReactHooks() {
             <div className='minor'>
                 <h2>Transition</h2>
                 <HookTransition />
+            </div>
+
+            <div className='minor'>
+                <h2>Custom hook</h2>
+                <HookCustom />
             </div>
         </div>
     )
