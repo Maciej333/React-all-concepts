@@ -1,0 +1,14 @@
+@import '../../../core/assets/styles/elemets.style.scss';
+
+.interval-timeout {
+    @extend .flex-column;
+    gap: 25px;
+
+    div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+}

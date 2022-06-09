@@ -2,6 +2,7 @@ import CodeSplit from './CodeSplit/CodeSplit';
 import Context from './Context/Context';
 import Fragment from './Fragment/Fragment';
 import HigherOrder from './HigherOrder/HigherOrder';
+import IntervalAndTimeout from './IntervalAndTimeout/IntervalAndTimeout';
 import MemoElement from './MemoElement/MemoElement';
 import './ReactAdvance.style.scss';
 import Reference from './Reference/Reference';
@@ -39,6 +40,12 @@ export default function ReactAdvance() {
                 <h2>Memo</h2>
                 <MemoElement />
             </div>
+
+            <div className='minor'>
+                <h2>Interval, Timer</h2>
+                <IntervalAndTimeout />
+            </div>
+
         </div>
     )
 }
