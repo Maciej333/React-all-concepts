@@ -1,7 +1,11 @@
 import { NavLink } from 'react-router-dom';
+import { useAppSelector } from '../../hooks/store.hooks';
 import './NavLinks.style.scss';
 
 export default function NavLinks() {
+
+    const { isLogin } = useAppSelector(state => state.user);
+
     return (
         <nav className='nav-links'>
             <div className='link-container'>
@@ -11,6 +15,12 @@ export default function NavLinks() {
                 <NavLink to={"/router"}> React Router </NavLink>
                 <NavLink to={"/redux"}> React Redux </NavLink>
                 <NavLink to={"/http"}> React HTTP </NavLink>
+                {
+                    isLogin ?
+                        <NavLink to={"/components"}> Components </NavLink>
+                        :
+                        null
+                }
             </div>
         </nav>
     )
