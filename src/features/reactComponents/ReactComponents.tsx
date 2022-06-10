@@ -1,3 +1,4 @@
+import CompMultiSelect from './CompMultiSelect/CompMultiSelect';
 import './ReactComponents.style.scss';
 
 export default function ReactComponents() {
@@ -6,8 +7,8 @@ export default function ReactComponents() {
             <h1>Components</h1>
 
             <div className='minor'>
-                <h2>AAA</h2>
-                bbb
+                <h2>Multi select</h2>
+                <CompMultiSelect />
             </div>
         </div>
     )

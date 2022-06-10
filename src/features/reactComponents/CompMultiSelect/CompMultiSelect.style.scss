@@ -1,0 +1,19 @@
+.comp-p {
+    width: 60%;
+    margin: 25px 0;
+    padding-bottom: 5px;
+}
+
+.comp-multi-select {
+    width: 40%;
+    max-width: 40%;
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    .grid-top {
+        align-self: flex-start;
+    }
+}

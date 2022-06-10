@@ -1,0 +1,98 @@
+@import '../../../../core/assets/styles/colors.style.scss';
+
+.multi-select {
+    position: relative;
+    width: 100%;
+
+    .multi-select-selected {
+        width: 92%;
+        margin: 5px auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px 25px;
+
+        .selected-element {
+            position: relative;
+            padding: 2px 10px;
+            border: 1px solid $basic-color-4;
+            border-radius: 2px 5px;
+
+            .selected-delete-btn {
+                position: absolute;
+                top: -10px;
+                right: -15px;
+                padding: 2px 5px;
+                color: $basic-color-4;
+                background-color: $basic-color-2;
+                border-radius: 5px;
+                transition: 0.5s all ease-out;
+
+                &:hover {
+                    cursor: pointer;
+                    color: $basic-color-2;
+                    background-color: $basic-color-4;
+                }
+            }
+        }
+    }
+
+    .multi-select-search {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        margin-bottom: 2px;
+
+        input {
+            width: 96%;
+            font-size: 1.05rem;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .show {
+            position: absolute;
+            right: 5px;
+            width: 10px;
+            height: 100%;
+            color: $basic-color;
+            font-weight: 600;
+            transition: 0.5s all ease-out;
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .multi-select-options {
+        position: absolute;
+        z-index: 11;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        color: $basic-color;
+        background-color: $basic-color-4;
+        width: 100%;
+        max-height: 150px;
+        overflow-y: auto;
+
+        span {
+            width: 90%;
+            padding: 2px 5px;
+            text-align: left;
+            border-radius: 2px 5px;
+            transition: 0.5s all ease-out;
+
+            &:hover {
+                cursor: pointer;
+                color: $basic-color-4;
+                background-color: $basic-color;
+            }
+        }
+    }
+}
