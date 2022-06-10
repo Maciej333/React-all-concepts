@@ -5,7 +5,7 @@ export default function StateAndProp(props: { children: ReactNode, propString: s
 
     const { children, propString, propNumber } = props;
     const [stateString, setStateString] = useState("DANE");
-    const [stateNumber, setStateNumber] = useState(10);
+    const [stateNumber, setStateNumber] = useState(12);
     const [stateObject, setStateObject] = useState({
         name: "Alina",
         age: 10
@@ -34,7 +34,7 @@ export default function StateAndProp(props: { children: ReactNode, propString: s
                 <span>State number = </span>
                 <span>{stateNumber}</span>
                 <button onClick={() => handleClickNumber(99)}>NEW</button>
-                <button onClick={() => handleClickNumber(10)}>INIT</button>
+                <button onClick={() => handleClickNumber(12)}>INIT</button>
 
                 <span>State object = </span>
                 <div>
