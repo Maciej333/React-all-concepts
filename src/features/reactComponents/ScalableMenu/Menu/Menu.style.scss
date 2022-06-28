@@ -1,0 +1,83 @@
+@import '../../../../core/assets/styles/colors.style.scss';
+
+.menu {
+    background-color: $basic-color-4;
+
+    &.menu-lg {
+        width: 60%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: transparent;
+
+        .menu-lg-links {
+            width: 90%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+
+            background-color: $basic-color-4;
+            padding: 10px 20px;
+            border-radius: 7px 20px;
+        }
+    }
+
+    &.menu-sm {
+        position: relative;
+        right: 0;
+
+        .action {
+            width: 20px;
+            height: 20px;
+            padding: 5px;
+            color: $basic-color;
+            background-color: $basic-color-4;
+            border-radius: 5px;
+            transition: 0.5s all linear;
+
+            &:hover {
+                cursor: pointer;
+                color: $basic-color-4;
+                background-color: $basic-color-2;
+            }
+        }
+
+        .bar-sm {
+            position: absolute;
+            z-index: 21;
+            top: 31px;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: flex-start;
+            min-width: 100px;
+            width: auto;
+            padding: 4px;
+            background-color: $basic-color-4;
+            border-radius: 10px 0 10px 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .menu-lg {
+        display: none !important;
+    }
+
+    .menu-sm {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .menu-lg {
+        display: flex;
+    }
+
+    .menu-sm {
+        display: none !important;
+    }
+}

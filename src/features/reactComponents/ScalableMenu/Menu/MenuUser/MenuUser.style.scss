@@ -1,0 +1,43 @@
+@import '../../../../../core/assets/styles/colors.style.scss';
+
+.menu-user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px;
+    min-width: 60px;
+
+    img {
+        width: 50px;
+        height: 50px;
+        color: $basic-color-2;
+    }
+
+    a {
+        color: $basic-color-2;
+        font-weight: 550;
+        text-decoration: none;
+        transition: 0.7s all linear;
+
+        &:hover {
+            transform: scale(1.05);
+            font-weight: 600;
+            background-color: transparent !important;
+        }
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .menu-user {
+        border-bottom: 1px solid $basic-color;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .menu-user {
+        border-bottom: none;
+    }
+}

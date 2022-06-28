@@ -1,0 +1,41 @@
+@import '../../../../../core/assets/styles/colors.style.scss';
+
+.menu-link {
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.7s all linear;
+    font-weight: 520;
+    white-space: nowrap;
+}
+
+.menu {
+    &.menu-lg {
+        .menu-link {
+            color: $basic-color;
+            padding: 5px 6px;
+
+            &:hover,
+            &.active {
+                color: $basic-color-2;
+                background-color: $basic-color;
+                border-radius: 2px 8px;
+            }
+        }
+    }
+
+    &.menu-sm {
+        .bar-sm .menu-link {
+            min-width: 94%;
+            border-radius: 5px;
+            margin: 4px auto;
+            padding: 3px;
+            color: $basic-color;
+
+            &:hover,
+            &.active {
+                color: $basic-color-2;
+                background-color: $basic-color;
+            }
+        }
+    }
+}

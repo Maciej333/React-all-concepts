@@ -1,0 +1,33 @@
+@import '../../../core/assets/styles/elemets.style.scss';
+
+.scalable-menu {
+    @extend .flex-column;
+    gap: 20px;
+    width: 90%;
+
+    p {
+        width: 100%;
+    }
+
+    // div {
+    //     border: 2px solid $basic-color-2;
+    //     padding: 50px;
+    // }
+
+    // .large {
+    //     width: 80%;
+    //     min-width: 850px;
+    // }
+
+    // .medium {
+    //     width: 50%;
+    //     max-width: 849px;
+    //     min-width: 500px;
+    // }
+
+    // .small {
+    //     width: 20%;
+    //     max-width: 499px;
+    //     min-width: 300px;
+    // }
+}

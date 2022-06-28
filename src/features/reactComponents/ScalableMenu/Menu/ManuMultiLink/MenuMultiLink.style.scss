@@ -1,0 +1,48 @@
+@import '../.../../../../../../core/assets/styles/colors.style.scss';
+
+.menu-multi-link {
+    position: relative;
+
+    .main-name {
+        color: $basic-color;
+        font-weight: 520;
+        text-transform: capitalize;
+        padding: 5px 6px;
+        transition: 0.5s all linear;
+
+        &.active {
+            color: $basic-color-2;
+            background-color: $basic-color;
+            border-radius: 2px 8px;
+        }
+    }
+
+    .elements-list {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (max-width: 499px) {
+    .menu-multi-link .elements-list {
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.15);
+        border-right: 2px solid $basic-color;
+        padding-right: 4px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .menu-multi-link .elements-list {
+        position: absolute;
+        top: 30px;
+        right: -35px;
+        background-color: $basic-color-4;
+        padding: 2px 10px;
+        border: 2px solid $basic-color;
+        border-top: none;
+        border-radius: 0 0 5px 5px;
+        min-width: 70px;
+    }
+}
